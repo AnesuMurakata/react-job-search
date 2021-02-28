@@ -1,0 +1,30 @@
+.jobCard{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background-color: #ebe7e7;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.jobCard:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+p{
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: 'Arial';
+}
+
+.jobCard a{
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Arial';
+    color: #028AA2;
+}
+
+.jobCard a:hover{
+    text-decoration: underline;
+}
