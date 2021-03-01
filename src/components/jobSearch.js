@@ -17,6 +17,7 @@ const JobSearch = () => {
 
     var jobsArray = []
     const [jobsStateArray, setJobsStateArray] = useState([])
+    const [allCitiesJobs, setAllCitiesJobs] = useState([])
 
     useEffect(() => {          
         axios.request(options).then(function (response) {
@@ -25,14 +26,70 @@ const JobSearch = () => {
                 jobsArray.push(item)
             })
             setJobsStateArray(jobsArray)
+            setAllCitiesJobs(jobsArray)
         }).catch(function (error) {
             console.error(error);
         });
     }, [])
 
+    const handleFilterByCity = (city) => {
+
+        var recentlySelectedCityJobs = []
+        switch(city){
+            case "0":
+                setJobsStateArray(allCitiesJobs)
+                break
+            case "1":
+                allCitiesJobs.map((item, index) => {
+                    if(item.locationName === "Cardiff"){
+                        recentlySelectedCityJobs.push(item)
+                    }
+                })
+                setJobsStateArray(recentlySelectedCityJobs)
+                break
+            case "2":
+                allCitiesJobs.map((item, index) => {
+                    if(item.locationName === "London"){
+                        recentlySelectedCityJobs.push(item)
+                    }
+                })
+                setJobsStateArray(recentlySelectedCityJobs)
+                break
+            case "3":
+                allCitiesJobs.map((item, index) => {
+                    if(item.locationName === "Manchester"){
+                        recentlySelectedCityJobs.push(item)
+                    }
+                })
+                setJobsStateArray(recentlySelectedCityJobs)
+                break
+            case "4":
+                allCitiesJobs.map((item, index) => {
+                    if(item.locationName === "South West England"){
+                        recentlySelectedCityJobs.push(item)
+                    }
+                })
+                setJobsStateArray(recentlySelectedCityJobs)
+                break
+            default:
+                console.log('Do nothing...')
+        }
+    }
+
     return(
         <div className="jobSearchComponentContainer">
             <h2>Your Next Job Awaits</h2>
+
+            <h4>Filter By City:</h4>
+            <select onChange={e => handleFilterByCity(e.target.value)} >
+                <option value={0}>All</option>
+                <option value={1}>Cardiff</option>
+                <option value={2}>London</option>
+                <option value={3}>Manchester</option>
+                <option value={4}>South West England</option>
+            </select>
+
+            <hr/>
 
             {jobsStateArray.map((item, index) => {
                 return(
