@@ -64,7 +64,7 @@ export default JobSearch
 
 Open the src/pages/index.js file, import this component and delete everything else except for the Layout and SEO tags. Done correctly, your index.js file should look like this after you’ve imported the jobSearch component.
 
-```
+```javascript
 import React from "react"
 import JobSearch from "../components/jobSearch"
 import Layout from "../components/layout"
@@ -98,7 +98,7 @@ Head back to your text editor and add the axios module. Run the following comman
 
 Import axios in the jobSearch component and paste the axios code snippet from the API page here. As this is a functional component we’ll use hooks to implement the componentDidMount lifecycle method and paste the actual code for the request inside the useEffect hook like shown below: 
 
-```
+```javascript
 import React, {useEffect, useState} from "react"
 import axios from "axios"
 
@@ -136,7 +136,7 @@ You’ll notice our code has been modified to make use of state and the map func
 
 Next, it’s time to display the results of the API call. Modify the return method of the component to map through the jobsStateArray whilst displaying the contents of each job object as follows:
 
-```
+```javascript
 return(
         <div className="jobSearchComponentContainer">
             <h2>Your Next Job Awaits</h2>
@@ -164,7 +164,7 @@ Don’t forget to import the styles in jobSearch.js or risk wrongly accusing hot
 
 So far our app is great but it’s lacking user interaction. Let’s add a filter to only view jobs for the selected city. Modify the jobSearch component to add a dropdown of cities and a method to handle the most recently selected city.
 
-```
+```javascript
 <h4>Filter By City:</h4>
       <select onChange={e => handleFilterByCity(e.target.value)} >
           <option value={0}>All</option>
@@ -179,7 +179,7 @@ So far our app is great but it’s lacking user interaction. Let’s add a filte
  
 Now declare the handleFilterByCity method whose logic which will need us to create another state for keeping track of all the cities. When a user selects a city our method will loop through this state and only push job objects which have their locationName attribute equal to the selected city in the jobsStateArray (the array that’ll be updated every time a user makes a new change.)
 
-```
+```javascript
 const handleFilterByCity = (city) => {
 
       var recentlySelectedCityJobs = []
