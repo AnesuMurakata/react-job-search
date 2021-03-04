@@ -1,2 +1,0 @@
-`gatsby develop`
-We'll be learning today! 
