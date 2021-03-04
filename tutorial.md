@@ -1,8 +1,13 @@
 ## Creating your own Job Board with React and Gatsby
 
-We’ll be learning how to write a simple dynamic React application using some open source tools to make our lives easier and our application more efficient. The appliation is a Job Board which will display the latest software jobs in the UK because we all have to get paid at some point right? We’re going to use GatsbyJS, a framework known for its simple workflow and producing fast React web applications. 
+We’ll be learning how to write a simple dynamic React application using open source tools to make our lives easier and our application more efficient. The appliation is a Job Board which will display the latest software jobs in the UK because we all have to get paid at some point right? We’re going to use GatsbyJS, a framework known for its simple workflow and producing fast React web applications. 
 
 If you haven’t worked with Gatsby before you’re still in the right place as this tutorial only requires basic React knowledge for you to follow through. 
+
+When all is set and done this is how our Job Board will look like.
+
+![Git 1](https://user-images.githubusercontent.com/39013207/109974867-acf3d680-7d02-11eb-83ae-3dc7eeaa5b06.JPG)
+
 
 ## Gatsby Setup
 
@@ -79,7 +84,7 @@ Awesome, we can now see the changes we make to our component as we add the updat
 
 ## Rapid API Account Setup
 
-Visit Rapid API and create an account if you don’t have one with them already in order to use their services.  If you followed the aforementioned link, you’d have landed at the LatestReactJobs API page where you can view the api’s details. 
+Visit [Rapid API](https://rapidapi.com/shuaibam1/api/latestreactjsjobs) and create an account if you don’t have one with them already in order to use their services.  If you followed the aforementioned link, you’d have landed at the LatestReactJobs API page where you can view the api’s details. 
 
 Click on the Pricing link and subscribe to the API. That’s it, you can now also use this marvellous piece of work at no cost to your wallet!
 
@@ -149,7 +154,11 @@ return(
         </div>)
 ```
 
-Create a styles directory in the src folder and inside the styles directory create a file named jobSearch.css and add the following styles to make the job cards more visually appealing.
+![Git3](https://user-images.githubusercontent.com/39013207/109975853-c1849e80-7d03-11eb-969a-08e981401e60.JPG)
+
+This is how our app now looks like. It's working but let's do something about its appearance.
+
+Create a styles directory in the src folder and inside the styles directory create a file named jobSearch.css and add the following [styles](https://github.com/AnesuMurakata/react-job-search/blob/master/src/styles/jobSearch.css) to make the job cards more visually appealing.
 
 Don’t forget to import the styles in jobSearch.js or risk wrongly accusing hot reload of not working.
 
