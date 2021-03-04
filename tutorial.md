@@ -30,7 +30,7 @@ The last command produces a development build of the app we just created. To vie
 
 Next, let's open the layout.js component file and delete the footer tag to leave the return method of the component looking like so:
 
-```
+```javascript
 return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
@@ -51,7 +51,7 @@ return (
 
 It’s time to create the jobSearch component we’re going to import on the index page. In the components folder, create a file called jobSearch.js and paste the following code into it. 
 
-```
+```javascript
 import React from "react"
 
 const JobSearch = () => {
