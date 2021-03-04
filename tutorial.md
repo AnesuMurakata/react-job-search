@@ -1,10 +1,10 @@
-##Creating your own Job Board with React and Gatsby
+## Creating your own Job Board with React and Gatsby
 
 We’ll be learning how to write a simple dynamic React application using some open source tools to make our lives easier and our application more efficient. The appliation is a Job Board which will display the latest software jobs in the UK because we all have to get paid at some point right? We’re going to use GatsbyJS, a framework known for its simple workflow and producing fast React web applications. 
 
 If you haven’t worked with Gatsby before you’re still in the right place as this tutorial only requires basic React knowledge for you to follow through. 
 
-##Gatsby Setup
+## Gatsby Setup
 
 Let’s go ahead and install the GatsbyJS CLI using the following command:
 
@@ -42,7 +42,8 @@ return (
 )
 ```
 
-##Job Search Component Setup
+## Job Search Component Setup
+
 It’s time to create the jobSearch component we’re going to import on the index page. In the components folder, create a file called jobSearch.js and paste the following code into it. 
 
 ```
@@ -76,7 +77,7 @@ export default IndexPage
 
 Awesome, we can now see the changes we make to our component as we add the updates.
 
-##Rapid API Account Setup
+## Rapid API Account Setup
 
 Visit Rapid API and create an account if you don’t have one with them already in order to use their services.  If you followed the aforementioned link, you’d have landed at the LatestReactJobs API page where you can view the api’s details. 
 
@@ -84,7 +85,7 @@ Click on the Pricing link and subscribe to the API. That’s it, you can now als
 
 Go back to the Endpoints tab and under the Code Snippets section on the right change the language from Node.js to JavaScript > Axios. This will show you the equivalent JS code you need to paste in the jobSearch component for our app to be allowed access to the API.
 
-##API Integration
+## API Integration
 
 Head back to your text editor and add the axios module. Run the following command:
 
